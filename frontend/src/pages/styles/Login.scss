@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,800");
+
+.login {
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background: #f6f5f7;
+  display: flex;
+  overflow: hidden;
+}
+
+.login-modal {
+  width: 80%;
+  height: 70%;
+  background: white;
+  margin: auto;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  border-radius: 10px;
+  display: flex;
+
+  &__left,
+  &__right {
+    padding: 2rem;
+    font-weight: 700;
+  }
+
+  &__left {
+    padding-top: 10rem;
+    width: 50%;
+  }
+
+  &__input {
+    width: -webkit-fill-available;
+    font-size: 16px;
+    padding: 1rem;
+    border: 1px solid;
+    border-radius: 30px;
+  }
+
+  &__right {
+    padding-top: 8rem;
+    border-radius: 0 10px 10px 0;
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+    color: white;
+  }
+
+  &__subtitle {
+    font-size: 22px;
+    font-weight: 400;
+    margin-top: 3rem;
+  }
+}
+
+.logo {
+  width: 100%;
+  margin-top: 20%;
+}
+
+.trends-logo {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  width: 8%;
+  transform: rotate(10deg);
+  animation: trends-logo 0.6s infinite alternate linear;
+  @keyframes trends-logo {
+    to {
+      transform: translate(0, 1rem) rotate(10deg);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .login-modal {
+    margin: 4rem auto;
+  }
+  .login-modal__right {
+    display: none;
+  }
+  .login-modal__left {
+    padding-top: 6rem;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .login-modal {
+    width: 60%;
+  }
+
+  .trends-logo {
+    bottom: 4rem;
+    right: 4rem;
+    width: 10%;
+  }
+}

@@ -1,0 +1,15 @@
+.dashboard {
+  padding-top: 72px;
+}
+
+.pagination {
+  bottom: 0;
+  margin: 2rem 2rem;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    margin: 4rem 1rem;
+    padding: 0;
+  }
+}

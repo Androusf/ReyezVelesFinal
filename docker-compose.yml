@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+  db:
+    container_name: postgresdb
+    image: postgres:alpine
+    restart: always
+    environment:
+      POSTGRES_USER: Androusf
+      POSTGRES_PASSWORD: 123andres
+      POSTGRES_DB: google trends
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  frontend:
+    container_name: reactapp
+    build: ./frontend
+    volumes:
+      - ./frontend:/react
+    ports:
+      - '9000:9000'
+volumes:
+  postgres-data:
+    driver: local
